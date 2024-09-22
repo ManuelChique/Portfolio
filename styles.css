@@ -1,0 +1,323 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/*gracias html*/
+.gracias {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    background: linear-gradient(120deg, #4a90e2, #1f3a93, #73b1e6); /* Azul metalizado */
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.back-link {
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    color: white;
+    background: linear-gradient(120deg, #4a90e2, #1f3a93, #73b1e6); /* Azul metalizado */
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Menú de navegación */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    text-align: left; /* Alineación a la izquierda */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Alineación en fila */
+        justify-content: flex-start; /* Alineación a la izquierda */
+    }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+                nav ul li a:hover {
+                    color: #ae2bdd;
+                }
+
+/* Bienvenida inicial */
+#intro {
+    text-align: center;
+    padding: 100px 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
+    align-items: center;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: row; /* Alineación en fila (imagen a la izquierda) */
+    align-items: center;
+    justify-content: flex-start; /* Imagen a la izquierda */
+    flex-wrap: wrap;
+}
+
+.welcome-image {
+    flex: 1; /* Controla el tamaño de la imagen */
+}
+
+    .welcome-image img {
+        width: 300px; /* Ajusta el tamaño según sea necesario */
+        height: auto;
+        margin-right: 40px; /* Espacio entre la imagen y el texto */
+        border-radius: 50%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de la imagen */
+        animation: fadeInLeft 2s ease forwards;
+    }
+
+.welcome-text-container {
+    flex: 2; /* Controla el tamaño del contenedor del texto */
+}
+
+.fade-in {
+    opacity: 0;
+    font-size: 100px;
+    animation: fadeInLeft 2s ease forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fade-in-text {
+    opacity: 0;
+    font-size: 25px;
+    text-align: justify;
+    animation: fadeIn 3s ease 2s forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Secciones */
+section {
+    padding: 80px 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+    section h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    section p, section ul {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+/* Estilo de proyectos */
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#projects li {
+    width: 250px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+    #projects li:hover {
+        transform: scale(1.05);
+    }
+
+#projects .project-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    text-decoration: none;
+    color: white;
+}
+
+#projects img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#projects .project-title {
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de imágenes en Conocimientos */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+    .skills-grid img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+/* Estilos del formulario de contacto */
+form {
+    max-width: 500px; /* Limita el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    text-align: left; /* Mantén el contenido del formulario alineado a la izquierda */
+    padding: 20px; /* Opcional: Agrega algo de padding al formulario */
+    box-sizing: border-box;
+}
+
+input, textarea {
+    width: 100%; /* Asegura que los campos ocupen el 100% del ancho del formulario */
+    padding: 12px; /* Establece el mismo padding para todos los campos */
+    margin: 10px 0; /* Añade un margen entre los elementos */
+    border: 1px solid #ccc; /* Bordes más visibles */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Fuente consistente */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+    input[type="submit"] {
+        width: 100%; /* Asegura que el botón ocupe el mismo ancho que los demás campos */
+        padding: 12px; /* Asegura que el botón tenga el mismo padding */
+        background-color: #4b0082;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px; /* Mismo tamaño de fuente que los campos */
+        box-sizing: border-box; /* Para asegurar el tamaño correcto */
+        transition: background-color 0.3s;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #a418b3;
+        }
+
+/* Nueva sección Redes */
+#socials {
+    padding: 60px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.socials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+    .socials-grid img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s;
+    }
+
+        .socials-grid img:hover {
+            transform: scale(1.2);
+        }
+
+/* Responsive */
+
+/* Estilos de la sección en pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Flexbox columna para la sección de bienvenida */
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px; /* Reduce el padding */
+    }
+
+    /* Ajuste de imagen de bienvenida */
+    .welcome-image img {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    /* Ajuste del texto de bienvenida */
+    .welcome-text-container {
+        font-size: 18px; /* Reducir tamaño del texto */
+        line-height: 1.5;
+        text-align: center; /* Centrar texto */
+        padding: 10px 0; /* Reducir padding */
+    }
+
+    .fade-in {
+        font-size: 50px; /* Reducir tamaño del título */
+    }
+
+    .fade-in-text {
+        font-size: 16px; /* Reducir texto de bienvenida */
+        line-height: 1.4;
+    }
+}
+
+/* Estilos para pantallas aún más pequeñas */

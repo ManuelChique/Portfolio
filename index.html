@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chique Manuel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Acerca de mi</a></li>
+            <li><a href="#projects">Mis proyectos</a></li>
+            <li><a href="#skills">Conocimientos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#socials">Redes</a></li> <!-- Nueva sección de redes -->
+        </ul>
+    </nav>
+
+    <!-- Bienvenida inicial con imagen -->
+    <header id="intro">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1 class="fade-in">Bienvenidos</h1>
+                <p class="fade-in-text">
+                    ¡Hola! Soy Manuel Chique, estudiante de la Universidad Tecnológica Nacional (UTN). Me apasiona el desarrollo de software y la tecnología, y estoy en constante aprendizaje para mejorar mis habilidades en programación y proyectos tecnológicos. Este portfolio es un espacio donde comparto mis proyectos, experiencias y conocimientos adquiridos a lo largo de mi formación. ¡Gracias por visitar, y espero que encuentres algo interesante aquí!
+                </p>
+            </div>
+            <div class="welcome-image">
+                <img src="foto.jpeg" alt="Foto de perfil">
+            </div>
+        </div>
+    </header>
+
+  
+
+    <section id="projects">
+        <h2>Mis Proyectos</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/ManuelChique/tp-winform-equipo-7b.git" target="_blank" class="project-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/13138/13138337.png" alt="Proyecto WinForm">
+                    <span class="project-title">Proyecto WinForm - Gestor de Artículos en .NET Framework</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/ManuelChique/Gestion-de-stock.git" target="_blank" class="project-link">
+                    <img src="https://i.imgur.com/JwRqvfd.png" alt="Proyecto C++">
+                    <span class="project-title">Proyecto Consola - Gestor de Stock y Ventas en C++</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+
+
+
+    <!-- Sección Conocimientos -->
+    <section id="skills">
+        <h2>Conocimientos</h2>
+        <div class="skills-grid">
+            <img src="https://i.imgur.com/W8lei2G.png" alt="C#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/2048px-Microsoft_.NET_logo.svg.png" alt=".NET">
+            <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="SQL">
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form action="https://formsubmit.co/chiquemanuel@gmail.com" method="POST">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" placeholder="Tu nombre aquí" required><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Tu email aquí" required><br>
+    
+            <label for="phone">Teléfono:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono aquí" required><br>
+    
+            <label for="message">Mensaje:(opcional)</label><br>
+            <textarea id="message" name="message" placeholder="Tu mensaje aquí"></textarea><br>
+    
+            <!-- Campos ocultos para configuración adicional -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje de tu portfolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="gracias.html">
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Nueva sección Redes -->
+    <section id="socials">
+        <h2>Redes</h2>
+        <div class="socials-grid">
+            <a href="https://www.linkedin.com/in/manuel-chique-683157260/" target="_blank">
+                <img src="https://i.imgur.com/s7YjeWW.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/ManuelChique" target="_blank">
+                <img src="https://i.imgur.com/1tti7uD.png" alt="GitHub">
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
